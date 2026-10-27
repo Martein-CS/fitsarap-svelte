@@ -1,6 +1,6 @@
 import {fail} from '@sveltejs/kit';
 import type {Actions} from './$types';
-import {units} from '$lib/recipes';
+import {units} from '$lib/constants';
 import {clean} from '$lib/server/auth';
 import {addItem, clearItems, removeItem, saveExclusions} from '$lib/server/data';
 

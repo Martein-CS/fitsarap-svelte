@@ -11,7 +11,9 @@
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "db:local": "wrangler d1 migrations apply fitsarap-db --local",
-    "db:remote": "wrangler d1 migrations apply fitsarap-db --remote"
+    "db:remote": "wrangler d1 migrations apply fitsarap-db --remote",
+    "data": "node scripts/build-recipes.mjs",
+    "data:seed": "node scripts/build-recipes.mjs --file scripts/seed-rows.json"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250101.0",

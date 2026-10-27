@@ -3,7 +3,7 @@
   import type {SubmitFunction} from '@sveltejs/kit';
   import {withToast} from '$lib/enhance';
   import {notify} from '$lib/toast.svelte';
-  import {exclusions, stock, units} from '$lib/recipes';
+  import {exclusions, stock, units} from '$lib/constants';
   import {fmt} from '$lib/score';
   import type {PantryItem} from '$lib/types';
   import type {PageProps} from './$types';

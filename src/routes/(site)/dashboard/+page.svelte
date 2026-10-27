@@ -1,10 +1,8 @@
 <script lang="ts">
   import RecipeCard from '$lib/components/RecipeCard.svelte';
-  import {recipes} from '$lib/recipes';
-  import {ev} from '$lib/score';
   import type {PageProps} from './$types';
   let {data}: PageProps = $props();
-  const saved = $derived(recipes.filter((r) => data.saved.includes(r.id)).map((r) => ev(r, data.pantry)));
+  const saved = $derived(data.savedMatches);
 </script>
 
 <svelte:head><title>Dashboard | FitSarap</title></svelte:head>
@@ -18,7 +16,7 @@
   </div>
   <h2 style="font-size:28px;margin-bottom:16px">Saved recipes</h2>
   {#if saved.length}
-    <div class="g2">{#each saved as e (e.recipe.id)}<RecipeCard {e} saved={true} />{/each}</div>
+    <div class="g2">{#each saved as m (m.id)}<RecipeCard {m} saved={true} />{/each}</div>
   {:else}
     <div class="card"><p class="mut">Nothing saved yet. Open a recipe and choose “Save recipe”.</p><a class="btn" href="/matches" style="margin-top:12px">Browse matches</a></div>
   {/if}

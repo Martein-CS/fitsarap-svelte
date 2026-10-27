@@ -1,9 +1,8 @@
 <script lang="ts">
   import Photo from '$lib/components/Photo.svelte';
-  import {ev, visible} from '$lib/score';
   import type {PageProps} from './$types';
   let {data}: PageProps = $props();
-  const best = $derived(visible(data.exclusions).map((r) => ev(r, data.pantry)).sort((a, b) => b.pct - a.pct)[0]);
+  const best = $derived(data.best);
   const steps = [['🫙', 'Add your ingredients', 'Enter ingredients and approximate amounts you already have.'], ['✨', 'FitSarap checks them', 'It compares quantities and recipe needs.'], ['🍲', 'Get Filipino recipe matches', 'See ranked recipes, missing items, and instructions.']];
   const perks = [['🥘', 'Use what you have', 'Discover meals based on ingredients already at home.'], ['🛒', 'Reduce extra purchases', 'Prioritize recipes needing fewer additional ingredients.'], ['↗', 'Flexible matching', 'Find useful options even without a perfect match.'], ['🇵🇭', 'Filipino-focused', 'Explore familiar dishes built around local flavors.']];
 </script>
@@ -19,8 +18,8 @@
     <div class="chk">✓ Quantity-aware &nbsp; ✓ Filipino-focused</div>
   </div>
   <div class="cl">
-    {#if best}<Photo r={best.recipe} />{/if}
-    <div class="badge"><span class="pill">TOP MATCH</span><br><b class="serif" style="font-size:20px">{best ? best.pct : 0}% match</b><br><span class="mut">{best ? best.recipe.name : ''}</span></div>
+    {#if best}<Photo id={best.id} name={best.name} category={best.category} />{/if}
+    <div class="badge"><span class="pill">TOP MATCH</span><br><b class="serif" style="font-size:20px">{best ? best.pct : 0}% match</b><br><span class="mut">{best ? best.name : 'Add ingredients to see a match'}</span></div>
   </div>
 </div></section>
 

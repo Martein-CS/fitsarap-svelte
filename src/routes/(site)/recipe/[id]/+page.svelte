@@ -4,20 +4,21 @@
   import Photo from '$lib/components/Photo.svelte';
   import {withToast} from '$lib/enhance';
   import {notify} from '$lib/toast.svelte';
-  import {recipes} from '$lib/recipes';
-  import {ev, fmt, SUBS, time} from '$lib/score';
+  import {blurb, ev, fmt, suggestions, time} from '$lib/score';
   import type {Status} from '$lib/types';
   import type {PageProps} from './$types';
   let {data}: PageProps = $props();
 
-  let subs = $state<Record<string, boolean>>({});
+  // Substitutions the person chose, per recipe (kept only in this browser tab).
+  let chosen = $state<Record<string, string[]>>({});
   let nName = $state(''), nNote = $state('');
-  const r = $derived(recipes.find((x) => x.id === data.recipeId)!);
-  const applied = $derived(!!subs[data.recipeId]);
+  const r = $derived(data.recipe);
+  const applied = $derived(chosen[r.id] ?? []);
   const e = $derived(ev(r, data.pantry, applied));
-  const s = $derived(SUBS[data.recipeId]);
-  const saved = $derived(data.saved.includes(data.recipeId));
+  const subs = $derived(suggestions(e, applied));
+  const saved = $derived(data.saved.includes(r.id));
   const ST: Record<Status, [string, string]> = {enough: ['ok', '✓ Enough'], short: ['ms', '! Not enough'], unknown: ['mut', '? Check amount'], missing: ['ms', '! Missing']};
+  const toggle = (key: string) => { chosen[r.id] = applied.includes(key) ? applied.filter((k) => k !== key) : [...applied, key]; };
   const afterNote: SubmitFunction = () => async ({result, update}) => {
     await update({reset: false});
     if (result.type === 'success') { nName = ''; nNote = ''; notify('Custom ingredient added.'); }
@@ -32,14 +33,16 @@
   <div class="rhead" style="margin:22px 0 26px">
     <div>
       <span class="pill o">{e.lbl.toUpperCase()} — {e.pct}%</span>
-      <h1 style="margin:14px 0 8px;font-size:clamp(36px,5vw,54px)">{r.name}</h1>
-      <p class="mut">{r.description}</p>
-      <p class="sm" style="margin-top:12px"><b>Prep</b> {r.prep} min &nbsp; <b>Cook</b> {r.cook} min &nbsp; <b>Total</b> {time(r)} min &nbsp; <b>Serves</b> {r.servings}</p>
+      <h1 style="margin:14px 0 8px;font-size:clamp(32px,5vw,50px)">{r.name}</h1>
+      <p class="mut">{blurb(r)}</p>
+      <p class="sm" style="margin-top:12px">
+        {#if r.prep}<b>Prep</b> {r.prep} min &nbsp;{/if}{#if r.cook}<b>Cook</b> {r.cook} min &nbsp;{/if}{#if time(r)}<b>Total</b> {time(r)} min &nbsp;{/if}<b>Serves</b> {r.servings}
+      </p>
       <form method="POST" action="?/save" use:enhance={withToast('Saved recipes updated.')}>
         <button class="btn out" style="margin-top:14px">{saved ? '★ Saved to dashboard' : '☆ Save recipe'}</button>
       </form>
     </div>
-    <Photo {r} min={240} />
+    <Photo id={r.id} name={r.name} category={r.category} min={240} />
   </div>
 
   <div class="card" style="background:var(--mint);display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:18px;align-items:center">
@@ -57,18 +60,24 @@
       <div class="tb"><table>
         <thead><tr><th>INGREDIENT</th><th>RECIPE NEEDS</th><th>YOU HAVE</th><th>STATUS</th></tr></thead>
         <tbody>{#each e.rows as x}
-          <tr><td><b>{x.name}</b>{#if x.optional} <span class="mut sm">(optional)</span>{/if}</td><td>{x.amount} {x.unit}</td><td>{x.have ? fmt(x.have) : '0'}</td><td class={ST[x.status][0]}>{ST[x.status][1]}</td></tr>
+          <tr>
+            <td><b>{x.name}</b>{#if x.staple} <span class="mut sm">(pantry staple)</span>{:else if x.optional} <span class="mut sm">(optional)</span>{/if}<div class="mut sm">{x.raw}</div></td>
+            <td>{x.amount == null ? 'to taste' : x.amount + ' ' + x.unit}</td>
+            <td>{x.have ? fmt(x.have) : '0'}</td>
+            <td class={x.staple || x.optional ? 'mut' : ST[x.status][0]}>{x.staple || x.optional ? (x.status === 'missing' ? '—' : '✓ Have it') : ST[x.status][1]}</td>
+          </tr>
         {/each}</tbody>
       </table></div>
     </div>
 
-    {#if s && (e.canSub || applied)}
+    {#if subs.length}
       <div class="sub">
-        <span class="tag" style="color:var(--warn)">Suggested substitution</span><h3>Make this more compatible</h3>
-        <div class="bx"><span class="ms sm">MISSING</span><br><b>{s.f}</b><br>↓<br><span class="ok sm">TRY INSTEAD</span><br><b>{s.use} — {s.q}</b></div>
-        <p class="sm mut">{s.note}</p>
-        <button class="btn" style="width:100%;margin-top:14px" onclick={() => { subs[data.recipeId] = true; }} disabled={applied}>{applied ? '✓ Substitution applied' : '↻ Use ' + s.use.toLowerCase() + ' instead'}</button>
-        {#if applied}<button class="btn out" style="width:100%;margin-top:8px" onclick={() => { subs[data.recipeId] = false; }}>Keep original recipe</button>{/if}
+        <span class="tag" style="color:var(--warn)">Suggested substitutions</span><h3>Make this more compatible</h3>
+        {#each subs as s (s.key)}
+          <div class="bx"><span class="ms sm">MISSING</span><br><b>{s.name}</b><br>↓<br><span class="ok sm">TRY INSTEAD</span><br><b>{s.use}</b>
+            <p class="sm mut" style="margin:6px 0">{s.note}</p>
+            <button class="btn" style="width:100%" onclick={() => toggle(s.key)}>{s.done ? '✓ Applied. Keep original instead' : '↻ Use ' + s.use.toLowerCase() + ' instead'}</button></div>
+        {/each}
       </div>
     {:else if !e.need.length}
       <div class="card" style="border-color:var(--gr)"><b class="ok">✓ You have all essential ingredients.</b></div>

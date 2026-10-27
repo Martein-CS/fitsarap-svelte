@@ -2,7 +2,6 @@
   import {enhance} from '$app/forms';
   import Photo from '$lib/components/Photo.svelte';
   import {withToast} from '$lib/enhance';
-  import {recipes} from '$lib/recipes';
 </script>
 
 <svelte:head><title>Register | FitSarap</title></svelte:head>
@@ -21,5 +20,5 @@
     <p class="sm">Already have an account? <a href="/login"><u>Sign in now</u></a></p>
     <p class="sm"><a href="/">Continue as Guest</a></p>
   </div>
-  <Photo r={recipes[0]} />
+  <Photo id="chicken-adobo" name="Chicken Adobo" category="Adobo & Paksiw" />
 </div></div>

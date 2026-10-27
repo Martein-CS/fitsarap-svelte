@@ -90,3 +90,4 @@ th,td{padding:10px 12px;border-bottom:1px solid var(--ln)}.ok{color:var(--gr)}.m
 .ac .rp{border-radius:0;min-height:240px}.ac .rp .ph{--s:96px}
 
 .hdr-r{display:flex;gap:10px;align-items:center}
+a.chip{display:inline-block;text-decoration:none}

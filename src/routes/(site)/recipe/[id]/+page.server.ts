@@ -1,13 +1,14 @@
 import {error, fail} from '@sveltejs/kit';
 import type {Actions, PageServerLoad} from './$types';
-import {recipes} from '$lib/recipes';
+import {getRecipe} from '$lib/server/catalog';
 import {clean} from '$lib/server/auth';
 import {getNotes, setNote, toggleSaved} from '$lib/server/data';
 
 export const load: PageServerLoad = async (event) => {
   const id = event.params.id;
-  if (!recipes.some((r) => r.id === id)) error(404, 'Recipe not found');
-  return {recipeId: id, notes: await getNotes(event, id)};
+  const recipe = getRecipe(id);
+  if (!recipe) error(404, 'Recipe not found');
+  return {recipe, notes: await getNotes(event, id)};
 };
 
 export const actions: Actions = {

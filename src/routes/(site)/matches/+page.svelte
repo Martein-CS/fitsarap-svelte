@@ -1,24 +1,19 @@
 <script lang="ts">
   import RecipeCard from '$lib/components/RecipeCard.svelte';
-  import {recipes} from '$lib/recipes';
-  import {ev, time, visible} from '$lib/score';
   import type {PageProps} from './$types';
   let {data}: PageProps = $props();
-
-  let filter = $state('all'), category = $state('All'), sort = $state('best'), search = $state('');
-  const cats = ['All', ...new Set(recipes.map((r) => r.category))];
   const filters = [['all', 'All'], ['ready', 'Can Make Now'], ['missing', 'Missing 2 or Fewer']];
-  const all = $derived(visible(data.exclusions).map((r) => ev(r, data.pantry)));
-  const items = $derived.by(() => {
-    let l = all;
-    if (filter === 'ready') l = l.filter((e) => e.ready);
-    else if (filter === 'missing') l = l.filter((e) => e.need.length <= 2);
-    if (category !== 'All') l = l.filter((e) => e.recipe.category === category);
-    const q = search.trim().toLowerCase();
-    if (q) l = l.filter((e) => (e.recipe.name + ' ' + e.recipe.ingredients.map((i) => i.name).join(' ')).toLowerCase().includes(q));
-    return [...l].sort((a, b) => sort === 'fewest' ? a.need.length - b.need.length || b.pct - a.pct : sort === 'time' ? time(a.recipe) - time(b.recipe) : b.pct - a.pct);
-  });
-  const top = $derived(items[0]);
+
+  function href(over: Record<string, string | number>) {
+    const cur: Record<string, string | number> = {...data.params, page: 1, ...over};
+    const p = new URLSearchParams();
+    for (const [k, v] of Object.entries(cur)) {
+      const s = String(v);
+      if (s && s !== 'All' && !(k === 'sort' && s === 'best') && !(k === 'filter' && s === 'all') && !(k === 'page' && s === '1')) p.set(k, s);
+    }
+    const qs = p.toString();
+    return '/matches' + (qs ? '?' + qs : '');
+  }
 </script>
 
 <svelte:head><title>Your matches | FitSarap</title></svelte:head>
@@ -26,24 +21,47 @@
 <section class="page"><div class="wrap">
   <span class="tag">Ingredient-overlap ranking</span>
   <h1>Your recipe <em>Matches.</em></h1>
-  <p class="mut sm" style="margin-top:6px">Based on your {data.pantry.length} available ingredients</p>
+  <p class="mut sm" style="margin-top:6px">Based on your {data.pantry.length} available ingredients. Recipes that share none of them are hidden.</p>
   <div class="card stats">
     <div><span class="mut sm">Ingredients available</span><b>{data.pantry.length}</b></div>
-    <div><span class="mut sm">Recipes found</span><b>{all.length}</b></div>
-    <div><span class="mut sm">Best match</span><b>{top ? top.recipe.name : '—'}</b></div>
-    <div><span class="mut sm">Missing for best</span><b>{top ? top.need.length : '—'}</b></div>
+    <div><span class="mut sm">Matching recipes</span><b>{data.matchedTotal}</b></div>
+    <div><span class="mut sm">Best match</span><b>{data.top ? data.top.name : '—'}</b></div>
+    <div><span class="mut sm">Missing for best</span><b>{data.top ? data.top.missing.length : '—'}</b></div>
   </div>
-  <div class="filters">
+
+  <form class="filters" method="GET" action="/matches" data-sveltekit-keepfocus>
+    <input type="hidden" name="filter" value={data.params.filter}>
     <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:end">
-      <label class="sm" for="q">Search<br><input id="q" bind:value={search} placeholder="Name or ingredient"></label>
-      <label class="sm" for="cat">Category<br><select id="cat" bind:value={category}>{#each cats as c}<option>{c}</option>{/each}</select></label>
-      <label class="sm" for="sort">Sort by<br><select id="sort" bind:value={sort}><option value="best">Best match</option><option value="fewest">Fewest missing</option><option value="time">Shortest time</option></select></label>
+      <label class="sm" for="q">Search<br><input id="q" name="q" value={data.params.q} placeholder="Recipe or ingredient"></label>
+      <label class="sm" for="cat">Category<br>
+        <select id="cat" name="category" onchange={(e) => e.currentTarget.form?.requestSubmit()}>
+          <option value="All">All</option>
+          {#each data.cats as c}<option value={c} selected={data.params.category === c}>{c}</option>{/each}
+        </select></label>
+      <label class="sm" for="sort">Sort by<br>
+        <select id="sort" name="sort" onchange={(e) => e.currentTarget.form?.requestSubmit()}>
+          <option value="best" selected={data.params.sort === 'best'}>Best match</option>
+          <option value="fewest" selected={data.params.sort === 'fewest'}>Fewest missing</option>
+          <option value="time" selected={data.params.sort === 'time'}>Shortest time</option>
+        </select></label>
+      <button class="btn out" type="submit">Search</button>
     </div>
-    <div class="chips">{#each filters as [v, l]}<button class="chip" class:on={filter === v} onclick={() => { filter = v; }}>{l}</button>{/each}</div>
-  </div>
-  {#if items.length}
-    <div class="g2">{#each items as e (e.recipe.id)}<RecipeCard {e} saved={data.saved.includes(e.recipe.id)} />{/each}</div>
+    <div class="chips">{#each filters as [v, l]}<a class="chip" class:on={data.params.filter === v} href={href({filter: v})}>{l}</a>{/each}</div>
+  </form>
+
+  {#if data.items.length}
+    <p class="mut sm" style="margin-bottom:12px">Showing {data.items.length} of {data.found} recipes</p>
+    <div class="g2">{#each data.items as m (m.id)}<RecipeCard {m} saved={data.saved.includes(m.id)} />{/each}</div>
+    {#if data.pages > 1}
+      <div class="chips" style="justify-content:center;margin-top:28px;align-items:center">
+        {#if data.params.page > 1}<a class="chip" href={href({page: data.params.page - 1})}>← Previous</a>{/if}
+        <span class="mut sm">Page {data.params.page} of {data.pages}</span>
+        {#if data.params.page < data.pages}<a class="chip" href={href({page: data.params.page + 1})}>Next →</a>{/if}
+      </div>
+    {/if}
+  {:else if data.pantry.length === 0}
+    <div class="card c"><h3>Add your ingredients first</h3><p class="mut">Recipes appear once they share an ingredient with your pantry.</p><a class="btn" href="/find" style="margin-top:12px">Add ingredients</a></div>
   {:else}
-    <div class="card c"><h3>No recipes match</h3><p class="mut">Try another filter or <a href="/find"><u>add more ingredients</u></a>.</p></div>
+    <div class="card c"><h3>No recipes match</h3><p class="mut">None of your ingredients appear in a recipe that fits these filters. Try another filter or <a href="/find"><u>add more ingredients</u></a>.</p></div>
   {/if}
 </div></section>
