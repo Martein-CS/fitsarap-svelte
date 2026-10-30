@@ -18,7 +18,7 @@
     <div class="chk">✓ Quantity-aware &nbsp; ✓ Filipino-focused</div>
   </div>
   <div class="cl">
-    {#if best}<Photo id={best.id} name={best.name} category={best.category} />{/if}
+    {#if best}<Photo id={best.id} name={best.name} category={best.category} dish={best.dish} />{/if}
     <div class="badge"><span class="pill">TOP MATCH</span><br><b class="serif" style="font-size:20px">{best ? best.pct : 0}% match</b><br><span class="mut">{best ? best.name : 'Add ingredients to see a match'}</span></div>
   </div>
 </div></section>

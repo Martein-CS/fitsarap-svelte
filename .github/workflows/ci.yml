@@ -1,0 +1,39 @@
+# Infrastructure as code: every push and pull request is type-checked, tested against the benchmark and built.
+# Deploys run only when started by hand (Actions > CI > Run workflow) and need two repository secrets:
+# CLOUDFLARE_API_TOKEN (Workers + D1 edit permissions) and CLOUDFLARE_ACCOUNT_ID.
+name: CI
+on:
+  push: {branches: [main]}
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      deploy: {description: 'Deploy to Cloudflare after the checks pass', type: boolean, default: false}
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22, cache: npm}
+      - run: npm ci
+      - run: npm run check
+      - run: npm run check:workers
+      - run: npm test
+      - run: npm run parity
+      - run: npm run build
+
+  deploy:
+    needs: verify
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22, cache: npm}
+      - run: npm ci
+      - run: npm run db:remote
+      - run: npm run deploy

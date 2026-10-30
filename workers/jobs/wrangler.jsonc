@@ -1,0 +1,10 @@
+{
+  "name": "fitsarap-jobs",
+  "main": "index.ts",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "observability": { "enabled": true },
+  "triggers": { "crons": ["17 19 * * *"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "fitsarap-db", "database_id": "278d7bac-c744-4895-872c-4d574c7c38c0" }],
+  "queues": { "consumers": [{ "queue": "fitsarap-events", "max_batch_size": 50, "max_batch_timeout": 30, "max_retries": 3 }] }
+}

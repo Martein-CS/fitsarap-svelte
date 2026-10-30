@@ -1,6 +1,6 @@
 <script lang="ts">
   import './layout.css';
-  import {toast} from '$lib/toast.svelte';
+  import {toast} from '$lib/client/toast.svelte';
   import type {LayoutProps} from './$types';
   let {children}: LayoutProps = $props();
 </script>

@@ -1,0 +1,8 @@
+{
+  // Recommendation service: no public URL, reachable only through the website's service binding.
+  "name": "fitsarap-recommender",
+  "main": "index.ts",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "observability": { "enabled": true }
+}

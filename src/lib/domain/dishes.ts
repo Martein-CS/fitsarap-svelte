@@ -1,0 +1,72 @@
+// Dish families, used for example photos. Each recipe is matched (by name) to the first family whose pattern fits,
+// e.g. "Adobong Manok sa Gata" -> adobo. `wiki` is the English Wikipedia article whose lead photo (from Wikimedia
+// Commons, freely licensed) is shown as an *example* of the dish when the team has not added its own photo.
+export interface Dish { key: string; label: string; wiki: string; re: RegExp }
+
+const D = (key: string, label: string, wiki: string, re: RegExp): Dish => ({key, label, wiki, re});
+
+// Order matters: specific names first.
+export const DISHES: Dish[] = [
+  D('lechon-kawali', 'lechon kawali', 'Lechon_kawali', /lechon kawali/),
+  D('crispy-pata', 'crispy pata', 'Crispy_pata', /crispy pata/),
+  D('chicken-inasal', 'chicken inasal', 'Chicken_inasal', /inasal/),
+  D('bicol-express', 'Bicol Express', 'Bicol_Express', /bicol express/),
+  D('arroz-caldo', 'arroz caldo', 'Arroz_caldo', /arroz caldo|lugaw|goto\b|congee|porridge/),
+  D('kare-kare', 'kare-kare', 'Kare-kare', /kare-?kare/),
+  D('sinigang', 'sinigang', 'Sinigang', /sinigang/),
+  D('tinola', 'tinola', 'Tinola', /tinola|tinolang/),
+  D('nilaga', 'nilaga', 'Nilaga', /nilaga|nilagang/),
+  D('bulalo', 'bulalo', 'Bulalo', /bulalo/),
+  D('batchoy', 'batchoy', 'Batchoy', /batchoy/),
+  D('sisig', 'sisig', 'Sisig', /sisig/),
+  D('dinuguan', 'dinuguan', 'Dinuguan', /dinuguan/),
+  D('kaldereta', 'kaldereta', 'Kaldereta', /kaldereta|caldereta|calderetang|kalderetang/),
+  D('afritada', 'afritada', 'Afritada', /afritada/),
+  D('mechado', 'mechado', 'Mechado', /mechado/),
+  D('menudo', 'menudo', 'Menudo_(stew)', /menudo/),
+  D('pinakbet', 'pinakbet', 'Pinakbet', /pinakbet|pakbet/),
+  D('laing', 'laing', 'Laing_(food)', /\blaing\b/),
+  D('bistek', 'bistek', 'Bistek', /bistek|bistik|beefsteak tagalog/),
+  D('paksiw', 'paksiw', 'Paksiw', /paksiw/),
+  D('adobo', 'adobo', 'Philippine_adobo', /adobo|adobong/),
+  D('kinilaw', 'kinilaw', 'Kinilaw', /kinilaw|kilawin|ceviche/),
+  D('binagoongan', 'binagoongan', 'Binagoongan', /binagoongan/),
+  D('humba', 'humba', 'Humba', /humba/),
+  D('pochero', 'pochero', 'Puchero', /pochero|pocherong|puchero/),
+  D('pinangat', 'pinangat', 'Pinangat', /pinangat/),
+  D('relleno', 'rellenong bangus', 'Rellenong_bangus', /relleno/),
+  D('paella', 'paella', 'Paella', /paella/),
+  D('ginataan', 'ginataan', 'Ginataan', /ginataan|ginataang|sa gata/),
+  D('pancit', 'pancit', 'Pancit', /pancit|pansit|bihon|sotanghon|canton|palabok|lomi|miki\b|mami\b|misua|miswa/),
+  D('lumpia', 'lumpia', 'Lumpia', /lumpia|shanghai|spring rolls?/),
+  D('chopsuey', 'chop suey', 'Chop_suey', /chop ?suey/),
+  D('monggo', 'ginisang monggo', 'Ginisang_monggo', /monggo|mung ?beans?/),
+  D('sopas', 'sopas', 'Sopas', /sopas/),
+  D('tortang-talong', 'tortang talong', 'Tortang_talong', /tortang talong|eggplant omelet/),
+  D('silog', 'silog', 'Tapsilog', /\w+silog|\btapa\b/),
+  D('longganisa', 'longganisa', 'Longganisa', /longg?anisa/),
+  D('tocino', 'tocino', 'Tocino', /tocino/),
+  D('sinangag', 'sinangag', 'Sinangag', /sinangag|garlic rice/),
+  D('champorado', 'champorado', 'Champorado', /champorado/),
+  D('lechon', 'lechon', 'Lechon', /lechon/),
+  D('chicharon', 'chicharon', 'Chicharr%C3%B3n', /chicharr?on/),
+  D('halo-halo', 'halo-halo', 'Halo-halo', /halo-?halo/),
+  D('leche-flan', 'leche flan', 'Leche_flan', /leche flan|flan\b/),
+  D('turon', 'turon', 'Turon_(food)', /turon/),
+  D('bibingka', 'bibingka', 'Bibingka', /bibingka/),
+  D('puto', 'puto', 'Puto_(food)', /\bputo\b/),
+  D('biko', 'biko', 'Biko_(food)', /\bbiko\b/),
+  D('kutsinta', 'kutsinta', 'Kutsinta', /kutsinta|cuchinta/),
+  D('maja-blanca', 'maja blanca', 'Maja_blanca', /maja blanca/),
+  D('ube-halaya', 'ube halaya', 'Ube_halaya', /ube halaya|halayang ube|ube jam/),
+  D('taho', 'taho', 'Taho', /\btaho\b/),
+  D('kwek-kwek', 'kwek-kwek', 'Kwek-kwek', /kwek-?kwek|tokneneng/),
+  D('fish-ball', 'fish balls', 'Fish_ball', /fish ?balls?/),
+  D('daing', 'daing', 'Daing', /\bdaing\b|danggit|dried fish/),
+  D('fried-chicken', 'fried chicken', 'Fried_chicken', /fried chicken|chicken wings|chicken joy/),
+  D('fried-rice', 'fried rice', 'Fried_rice', /fried rice/),
+  D('inihaw', 'inihaw (grilled)', 'Inihaw', /inihaw|grilled|barbecue|bbq|\bihaw/)
+];
+
+export const dishByKey = new Map(DISHES.map((d) => [d.key, d]));
+export const dishFor = (name: string): string | null => DISHES.find((d) => d.re.test(name.toLowerCase()))?.key ?? null;

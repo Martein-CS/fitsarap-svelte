@@ -1,0 +1,1434 @@
+{
+ "all-purpose flour": [
+  {
+   "use": "cornstarch",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cornstarch as an alternative to all-purpose flour in 1 recipe of the dataset."
+  }
+ ],
+ "anise liqueur": [
+  {
+   "use": "rice wine",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list rice wine as an alternative to anise liqueur in 1 recipe of the dataset."
+  }
+ ],
+ "apple cider": [
+  {
+   "use": "cane vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cane vinegar as an alternative to apple cider in 1 recipe of the dataset."
+  }
+ ],
+ "balaw": [
+  {
+   "use": "shrimp paste",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list shrimp paste as an alternative to balaw in 1 recipe of the dataset."
+  }
+ ],
+ "banana ketchup": [
+  {
+   "use": "ketchup",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list ketchup as an alternative to banana ketchup in 1 recipe of the dataset."
+  }
+ ],
+ "banana ketchup recommended": [
+  {
+   "use": "ketchup",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list ketchup as an alternative to banana ketchup recommended in 1 recipe of the dataset."
+  }
+ ],
+ "banana leaf": [
+  {
+   "use": "aluminum foil",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list aluminum foil as an alternative to banana leaf in 1 recipe of the dataset."
+  }
+ ],
+ "bay leaf": [
+  {
+   "use": "oregano",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list oregano as an alternative to bay leaf in 1 recipe of the dataset."
+  }
+ ],
+ "beef": [
+  {
+   "use": "pork",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list pork as an alternative to beef in 2 recipes of the dataset."
+  },
+  {
+   "use": "pork kidney",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list pork kidney as an alternative to beef in 2 recipes of the dataset."
+  }
+ ],
+ "beef base": [
+  {
+   "use": "beef bouillon cube",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef bouillon cube as an alternative to beef base in 1 recipe of the dataset."
+  }
+ ],
+ "beef bile": [
+  {
+   "use": "ampalaya",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list ampalaya as an alternative to beef bile in 1 recipe of the dataset."
+  }
+ ],
+ "beef bouillon cube": [
+  {
+   "use": "pork bouillon cube",
+   "source": "recipes",
+   "count": 4,
+   "note": "Recipe authors list pork bouillon cube as an alternative to beef bouillon cube in 4 recipes of the dataset."
+  },
+  {
+   "use": "beef",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list beef as an alternative to beef bouillon cube in 2 recipes of the dataset."
+  }
+ ],
+ "beef broth": [
+  {
+   "use": "pork broth",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list pork broth as an alternative to beef broth in 3 recipes of the dataset."
+  },
+  {
+   "use": "chicken broth",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken broth as an alternative to beef broth in 1 recipe of the dataset."
+  }
+ ],
+ "beef chuck": [
+  {
+   "use": "beef round",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef round as an alternative to beef chuck in 1 recipe of the dataset."
+  }
+ ],
+ "beef neck": [
+  {
+   "use": "beef ribs",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef ribs as an alternative to beef neck in 1 recipe of the dataset."
+  },
+  {
+   "use": "oxtail",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list oxtail as an alternative to beef neck in 1 recipe of the dataset."
+  }
+ ],
+ "beef shank": [
+  {
+   "use": "pork hock",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list pork hock as an alternative to beef shank in 1 recipe of the dataset."
+  }
+ ],
+ "beef sirloin": [
+  {
+   "use": "beef round",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef round as an alternative to beef sirloin in 1 recipe of the dataset."
+  },
+  {
+   "use": "beef steak",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef steak as an alternative to beef sirloin in 1 recipe of the dataset."
+  },
+  {
+   "use": "beef tenderloin",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef tenderloin as an alternative to beef sirloin in 1 recipe of the dataset."
+  }
+ ],
+ "bell pepper": [
+  {
+   "use": "pimiento",
+   "source": "curated",
+   "count": 0,
+   "note": "Pimiento has a similar mild, slightly sweet flavor."
+  }
+ ],
+ "bisugo bangus": [
+  {
+   "use": "fish",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list fish as an alternative to bisugo bangus in 1 recipe of the dataset."
+  }
+ ],
+ "broth": [
+  {
+   "use": "chicken",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken as an alternative to broth in 1 recipe of the dataset."
+  }
+ ],
+ "brown sugar": [
+  {
+   "use": "panocha",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list panocha as an alternative to brown sugar in 1 recipe of the dataset."
+  },
+  {
+   "use": "muscovado sugar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list muscovado sugar as an alternative to brown sugar in 1 recipe of the dataset."
+  }
+ ],
+ "butter": [
+  {
+   "use": "margarine",
+   "source": "recipes",
+   "count": 4,
+   "note": "Recipe authors list margarine as an alternative to butter in 4 recipes of the dataset."
+  }
+ ],
+ "butternut squash": [
+  {
+   "use": "kalabasa",
+   "source": "recipes",
+   "count": 4,
+   "note": "Recipe authors list kalabasa as an alternative to butternut squash in 4 recipes of the dataset."
+  }
+ ],
+ "calamansi": [
+  {
+   "use": "lime",
+   "source": "recipes",
+   "count": 7,
+   "note": "Recipe authors list lime as an alternative to calamansi in 7 recipes of the dataset."
+  },
+  {
+   "use": "lemon",
+   "source": "recipes",
+   "count": 5,
+   "note": "Recipe authors list lemon as an alternative to calamansi in 5 recipes of the dataset."
+  },
+  {
+   "use": "lemon juice",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list lemon juice as an alternative to calamansi in 3 recipes of the dataset."
+  },
+  {
+   "use": "lime juice",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list lime juice as an alternative to calamansi in 1 recipe of the dataset."
+  }
+ ],
+ "calamansi juice": [
+  {
+   "use": "lemon juice",
+   "source": "recipes",
+   "count": 11,
+   "note": "Recipe authors list lemon juice as an alternative to calamansi juice in 11 recipes of the dataset."
+  },
+  {
+   "use": "lime juice",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list lime juice as an alternative to calamansi juice in 3 recipes of the dataset."
+  },
+  {
+   "use": "orange",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list orange as an alternative to calamansi juice in 1 recipe of the dataset."
+  },
+  {
+   "use": "lemon",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list lemon as an alternative to calamansi juice in 1 recipe of the dataset."
+  }
+ ],
+ "camote tops": [
+  {
+   "use": "malunggay",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list malunggay as an alternative to camote tops in 1 recipe of the dataset."
+  }
+ ],
+ "cane vinegar": [
+  {
+   "use": "white vinegar",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list white vinegar as an alternative to cane vinegar in 2 recipes of the dataset."
+  },
+  {
+   "use": "apple cider vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list apple cider vinegar as an alternative to cane vinegar in 1 recipe of the dataset."
+  }
+ ],
+ "canola oil": [
+  {
+   "use": "sesame oil",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list sesame oil as an alternative to canola oil in 2 recipes of the dataset."
+  },
+  {
+   "use": "olive oil",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list olive oil as an alternative to canola oil in 2 recipes of the dataset."
+  }
+ ],
+ "carabao meat": [
+  {
+   "use": "beef round",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef round as an alternative to carabao meat in 1 recipe of the dataset."
+  }
+ ],
+ "chicken bouillon cube": [
+  {
+   "use": "chicken",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken as an alternative to chicken bouillon cube in 1 recipe of the dataset."
+  }
+ ],
+ "chicken breast": [
+  {
+   "use": "chicken",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken as an alternative to chicken breast in 1 recipe of the dataset."
+  }
+ ],
+ "chicken broth": [
+  {
+   "use": "broth",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list broth as an alternative to chicken broth in 3 recipes of the dataset."
+  },
+  {
+   "use": "chicken bouillon cube",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken bouillon cube as an alternative to chicken broth in 1 recipe of the dataset."
+  }
+ ],
+ "chicken egg cooking tokneneng": [
+  {
+   "use": "quail egg",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list quail egg as an alternative to chicken egg cooking tokneneng in 1 recipe of the dataset."
+  }
+ ],
+ "chicken leg": [
+  {
+   "use": "chicken feet",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken feet as an alternative to chicken leg in 1 recipe of the dataset."
+  },
+  {
+   "use": "chicken",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken as an alternative to chicken leg in 1 recipe of the dataset."
+  }
+ ],
+ "chicken thigh": [
+  {
+   "use": "pork hock",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list pork hock as an alternative to chicken thigh in 2 recipes of the dataset."
+  }
+ ],
+ "chili flakes": [
+  {
+   "use": "chili pepper",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list chili pepper as an alternative to chili flakes in 2 recipes of the dataset."
+  },
+  {
+   "use": "sriracha",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list sriracha as an alternative to chili flakes in 1 recipe of the dataset."
+  }
+ ],
+ "chili leaves": [
+  {
+   "use": "malunggay",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list malunggay as an alternative to chili leaves in 1 recipe of the dataset."
+  }
+ ],
+ "chili pepper": [
+  {
+   "use": "siling labuyo",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list siling labuyo as an alternative to chili pepper in 2 recipes of the dataset."
+  },
+  {
+   "use": "siling haba",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list siling haba as an alternative to chili pepper in 1 recipe of the dataset."
+  }
+ ],
+ "chives": [
+  {
+   "use": "green onion",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list green onion as an alternative to chives in 1 recipe of the dataset."
+  }
+ ],
+ "cilantro": [
+  {
+   "use": "parsley",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list parsley as an alternative to cilantro in 1 recipe of the dataset."
+  },
+  {
+   "use": "leek",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list leek as an alternative to cilantro in 1 recipe of the dataset."
+  }
+ ],
+ "clove (spice)": [
+  {
+   "use": "cinnamon",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cinnamon as an alternative to clove (spice) in 1 recipe of the dataset."
+  }
+ ],
+ "coconut cream": [
+  {
+   "use": "coconut milk",
+   "source": "curated",
+   "count": 0,
+   "note": "Coconut milk is thinner; simmer a few minutes longer to thicken."
+  }
+ ],
+ "coconut vinegar": [
+  {
+   "use": "white vinegar",
+   "source": "recipes",
+   "count": 4,
+   "note": "Recipe authors list white vinegar as an alternative to coconut vinegar in 4 recipes of the dataset."
+  },
+  {
+   "use": "apple cider vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list apple cider vinegar as an alternative to coconut vinegar in 1 recipe of the dataset."
+  },
+  {
+   "use": "rice vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list rice vinegar as an alternative to coconut vinegar in 1 recipe of the dataset."
+  },
+  {
+   "use": "coconut",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list coconut as an alternative to coconut vinegar in 1 recipe of the dataset."
+  }
+ ],
+ "cooking oil": [
+  {
+   "use": "olive oil",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list olive oil as an alternative to cooking oil in 1 recipe of the dataset."
+  }
+ ],
+ "cow": [
+  {
+   "use": "pork liver",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list pork liver as an alternative to cow in 1 recipe of the dataset."
+  }
+ ],
+ "curry leaf": [
+  {
+   "use": "basil",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list basil as an alternative to curry leaf in 1 recipe of the dataset."
+  }
+ ],
+ "curry powder": [
+  {
+   "use": "curry paste",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list curry paste as an alternative to curry powder in 1 recipe of the dataset."
+  }
+ ],
+ "diced tomatoes": [
+  {
+   "use": "roma tomato",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list roma tomato as an alternative to diced tomatoes in 1 recipe of the dataset."
+  }
+ ],
+ "embutido pork": [
+  {
+   "use": "chicken",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken as an alternative to embutido pork in 1 recipe of the dataset."
+  }
+ ],
+ "fish": [
+  {
+   "use": "cream dory",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cream dory as an alternative to fish in 1 recipe of the dataset."
+  }
+ ],
+ "fish broth": [
+  {
+   "use": "shrimp stock",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list shrimp stock as an alternative to fish broth in 1 recipe of the dataset."
+  }
+ ],
+ "food coloring": [
+  {
+   "use": "annatto",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list annatto as an alternative to food coloring in 1 recipe of the dataset."
+  }
+ ],
+ "gin": [
+  {
+   "use": "rum",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list rum as an alternative to gin in 1 recipe of the dataset."
+  }
+ ],
+ "green beans": [
+  {
+   "use": "sitaw",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list sitaw as an alternative to green beans in 1 recipe of the dataset."
+  }
+ ],
+ "green bell pepper": [
+  {
+   "use": "jalapeno",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list jalapeno as an alternative to green bell pepper in 1 recipe of the dataset."
+  },
+  {
+   "use": "chili pepper",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chili pepper as an alternative to green bell pepper in 1 recipe of the dataset."
+  }
+ ],
+ "green onion": [
+  {
+   "use": "onion",
+   "source": "curated",
+   "count": 0,
+   "note": "Onion is stronger; use less and cook it a little longer."
+  }
+ ],
+ "green papaya": [
+  {
+   "use": "sayote",
+   "source": "curated",
+   "count": 0,
+   "note": "Sayote is a mild, similar-textured vegetable that can replace green papaya."
+  }
+ ],
+ "ground chicken": [
+  {
+   "use": "pork",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list pork as an alternative to ground chicken in 2 recipes of the dataset."
+  }
+ ],
+ "ground pork": [
+  {
+   "use": "beef",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list beef as an alternative to ground pork in 2 recipes of the dataset."
+  }
+ ],
+ "hot sauce": [
+  {
+   "use": "tomato sauce",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tomato sauce as an alternative to hot sauce in 1 recipe of the dataset."
+  }
+ ],
+ "iceberg": [
+  {
+   "use": "lettuce",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list lettuce as an alternative to iceberg in 1 recipe of the dataset."
+  }
+ ],
+ "juice extracted calamansi": [
+  {
+   "use": "lemon",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list lemon as an alternative to juice extracted calamansi in 1 recipe of the dataset."
+  }
+ ],
+ "kalabasa": [
+  {
+   "use": "butternut squash",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list butternut squash as an alternative to kalabasa in 1 recipe of the dataset."
+  }
+ ],
+ "kamias": [
+  {
+   "use": "tamarind",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tamarind as an alternative to kamias in 1 recipe of the dataset."
+  }
+ ],
+ "kangkong": [
+  {
+   "use": "spinach",
+   "source": "curated",
+   "count": 0,
+   "note": "Spinach cooks the same way and is a common swap in sinigang and tinola."
+  }
+ ],
+ "ketchup": [
+  {
+   "use": "tomato sauce",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tomato sauce as an alternative to ketchup in 1 recipe of the dataset."
+  }
+ ],
+ "lechon": [
+  {
+   "use": "lechon kawali",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list lechon kawali as an alternative to lechon in 1 recipe of the dataset."
+  }
+ ],
+ "leek": [
+  {
+   "use": "green onion",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list green onion as an alternative to leek in 1 recipe of the dataset."
+  }
+ ],
+ "lemon": [
+  {
+   "use": "calamansi",
+   "source": "recipes",
+   "count": 16,
+   "note": "Recipe authors list calamansi as an alternative to lemon in 16 recipes of the dataset."
+  }
+ ],
+ "lemon juice": [
+  {
+   "use": "calamansi juice",
+   "source": "recipes",
+   "count": 5,
+   "note": "Recipe authors list calamansi juice as an alternative to lemon juice in 5 recipes of the dataset."
+  }
+ ],
+ "lemon lime soda": [
+  {
+   "use": "soda",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list soda as an alternative to lemon lime soda in 1 recipe of the dataset."
+  },
+  {
+   "use": "ginger",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list ginger as an alternative to lemon lime soda in 1 recipe of the dataset."
+  }
+ ],
+ "lime": [
+  {
+   "use": "calamansi",
+   "source": "recipes",
+   "count": 9,
+   "note": "Recipe authors list calamansi as an alternative to lime in 9 recipes of the dataset."
+  }
+ ],
+ "liver spread": [
+  {
+   "use": "chicken liver",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken liver as an alternative to liver spread in 1 recipe of the dataset."
+  }
+ ],
+ "mahi mahi": [
+  {
+   "use": "tuna",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tuna as an alternative to mahi mahi in 1 recipe of the dataset."
+  }
+ ],
+ "margarine": [
+  {
+   "use": "butter",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list butter as an alternative to margarine in 3 recipes of the dataset."
+  }
+ ],
+ "miki": [
+  {
+   "use": "pancit canton",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list pancit canton as an alternative to miki in 1 recipe of the dataset."
+  }
+ ],
+ "muscovado sugar": [
+  {
+   "use": "coconut sugar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list coconut sugar as an alternative to muscovado sugar in 1 recipe of the dataset."
+  },
+  {
+   "use": "sugar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list sugar as an alternative to muscovado sugar in 1 recipe of the dataset."
+  }
+ ],
+ "mussels": [
+  {
+   "use": "clams",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list clams as an alternative to mussels in 1 recipe of the dataset."
+  }
+ ],
+ "onion": [
+  {
+   "use": "shallot",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list shallot as an alternative to onion in 1 recipe of the dataset."
+  }
+ ],
+ "orange soda": [
+  {
+   "use": "lemon lime soda",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list lemon lime soda as an alternative to orange soda in 1 recipe of the dataset."
+  }
+ ],
+ "packet sinigang mix": [
+  {
+   "use": "tamarind",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tamarind as an alternative to packet sinigang mix in 1 recipe of the dataset."
+  }
+ ],
+ "palm vinegar": [
+  {
+   "use": "white vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list white vinegar as an alternative to palm vinegar in 1 recipe of the dataset."
+  }
+ ],
+ "pancit malabon noodles": [
+  {
+   "use": "bihon",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list bihon as an alternative to pancit malabon noodles in 2 recipes of the dataset."
+  }
+ ],
+ "pechay": [
+  {
+   "use": "mustard greens",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list mustard greens as an alternative to pechay in 1 recipe of the dataset."
+  },
+  {
+   "use": "cabbage",
+   "source": "curated",
+   "count": 0,
+   "note": "Cabbage is sturdier, so cook it a little longer."
+  }
+ ],
+ "pork": [
+  {
+   "use": "pork hock",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list pork hock as an alternative to pork in 1 recipe of the dataset."
+  },
+  {
+   "use": "pork belly",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list pork belly as an alternative to pork in 1 recipe of the dataset."
+  }
+ ],
+ "pork belly": [
+  {
+   "use": "pork shoulder",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list pork shoulder as an alternative to pork belly in 2 recipes of the dataset."
+  },
+  {
+   "use": "shoulder",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list shoulder as an alternative to pork belly in 1 recipe of the dataset."
+  }
+ ],
+ "pork belly rib": [
+  {
+   "use": "pork ribs",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list pork ribs as an alternative to pork belly rib in 2 recipes of the dataset."
+  }
+ ],
+ "pork bouillon cube": [
+  {
+   "use": "beef bouillon cube",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef bouillon cube as an alternative to pork bouillon cube in 1 recipe of the dataset."
+  },
+  {
+   "use": "seasoning",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list seasoning as an alternative to pork bouillon cube in 1 recipe of the dataset."
+  }
+ ],
+ "pork broth": [
+  {
+   "use": "beef broth",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list beef broth as an alternative to pork broth in 2 recipes of the dataset."
+  },
+  {
+   "use": "shrimp stock",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list shrimp stock as an alternative to pork broth in 1 recipe of the dataset."
+  }
+ ],
+ "pork intestine": [
+  {
+   "use": "cow intestine",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cow intestine as an alternative to pork intestine in 1 recipe of the dataset."
+  }
+ ],
+ "pork liver": [
+  {
+   "use": "beef liver",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list beef liver as an alternative to pork liver in 1 recipe of the dataset."
+  }
+ ],
+ "pork loin": [
+  {
+   "use": "pork chop",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list pork chop as an alternative to pork loin in 1 recipe of the dataset."
+  }
+ ],
+ "pork shoulder": [
+  {
+   "use": "pork belly",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list pork belly as an alternative to pork shoulder in 3 recipes of the dataset."
+  }
+ ],
+ "potato starch": [
+  {
+   "use": "cornstarch",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cornstarch as an alternative to potato starch in 1 recipe of the dataset."
+  }
+ ],
+ "red bell pepper": [
+  {
+   "use": "green bell pepper",
+   "source": "recipes",
+   "count": 4,
+   "note": "Recipe authors list green bell pepper as an alternative to red bell pepper in 4 recipes of the dataset."
+  },
+  {
+   "use": "jalapeno",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list jalapeno as an alternative to red bell pepper in 1 recipe of the dataset."
+  }
+ ],
+ "red wine vinegar": [
+  {
+   "use": "cane vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cane vinegar as an alternative to red wine vinegar in 1 recipe of the dataset."
+  }
+ ],
+ "rice wine (tapuy)": [
+  {
+   "use": "rice wine",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list rice wine as an alternative to rice wine (tapuy) in 1 recipe of the dataset."
+  }
+ ],
+ "salt": [
+  {
+   "use": "fish sauce",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list fish sauce as an alternative to salt in 3 recipes of the dataset."
+  }
+ ],
+ "sayote": [
+  {
+   "use": "green papaya",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list green papaya as an alternative to sayote in 2 recipes of the dataset."
+  },
+  {
+   "use": "papaya",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list papaya as an alternative to sayote in 1 recipe of the dataset."
+  }
+ ],
+ "seasoning powder": [
+  {
+   "use": "bouillon cube",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list bouillon cube as an alternative to seasoning powder in 1 recipe of the dataset."
+  }
+ ],
+ "serrano pepper": [
+  {
+   "use": "siling haba",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list siling haba as an alternative to serrano pepper in 1 recipe of the dataset."
+  }
+ ],
+ "sherry": [
+  {
+   "use": "rum",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list rum as an alternative to sherry in 1 recipe of the dataset."
+  }
+ ],
+ "shoulder": [
+  {
+   "use": "pork hock",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list pork hock as an alternative to shoulder in 1 recipe of the dataset."
+  }
+ ],
+ "shrimp base powder": [
+  {
+   "use": "bouillon cube",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list bouillon cube as an alternative to shrimp base powder in 1 recipe of the dataset."
+  }
+ ],
+ "shrimp bouillon cube": [
+  {
+   "use": "shrimp",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list shrimp as an alternative to shrimp bouillon cube in 1 recipe of the dataset."
+  }
+ ],
+ "shrimp paste": [
+  {
+   "use": "balaw",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list balaw as an alternative to shrimp paste in 1 recipe of the dataset."
+  }
+ ],
+ "shrimp stock": [
+  {
+   "use": "chicken broth",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chicken broth as an alternative to shrimp stock in 1 recipe of the dataset."
+  }
+ ],
+ "siling haba": [
+  {
+   "use": "serrano pepper",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list serrano pepper as an alternative to siling haba in 1 recipe of the dataset."
+  },
+  {
+   "use": "chili pepper",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chili pepper as an alternative to siling haba in 1 recipe of the dataset."
+  }
+ ],
+ "siling labuyo": [
+  {
+   "use": "chili flakes",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list chili flakes as an alternative to siling labuyo in 2 recipes of the dataset."
+  },
+  {
+   "use": "siling haba",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list siling haba as an alternative to siling labuyo in 1 recipe of the dataset."
+  },
+  {
+   "use": "chili pepper",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chili pepper as an alternative to siling labuyo in 1 recipe of the dataset."
+  }
+ ],
+ "sinigang mix": [
+  {
+   "use": "tamarind",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list tamarind as an alternative to sinigang mix in 3 recipes of the dataset."
+  },
+  {
+   "use": "batuan",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list batuan as an alternative to sinigang mix in 1 recipe of the dataset."
+  },
+  {
+   "use": "calamansi juice",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list calamansi juice as an alternative to sinigang mix in 1 recipe of the dataset."
+  },
+  {
+   "use": "tamarind paste",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tamarind paste as an alternative to sinigang mix in 1 recipe of the dataset."
+  }
+ ],
+ "sitaw": [
+  {
+   "use": "green beans",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list green beans as an alternative to sitaw in 1 recipe of the dataset."
+  }
+ ],
+ "souring agent tamarind powder": [
+  {
+   "use": "kamias",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list kamias as an alternative to souring agent tamarind powder in 1 recipe of the dataset."
+  }
+ ],
+ "soy sauce": [
+  {
+   "use": "worcestershire sauce",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list worcestershire sauce as an alternative to soy sauce in 1 recipe of the dataset."
+  }
+ ],
+ "spanish mackerel": [
+  {
+   "use": "tilapia",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tilapia as an alternative to spanish mackerel in 1 recipe of the dataset."
+  }
+ ],
+ "spiced vinegar": [
+  {
+   "use": "soy sauce",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list soy sauce as an alternative to spiced vinegar in 1 recipe of the dataset."
+  }
+ ],
+ "spinach": [
+  {
+   "use": "kangkong",
+   "source": "recipes",
+   "count": 5,
+   "note": "Recipe authors list kangkong as an alternative to spinach in 5 recipes of the dataset."
+  },
+  {
+   "use": "malunggay",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list malunggay as an alternative to spinach in 2 recipes of the dataset."
+  },
+  {
+   "use": "alugbati",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list alugbati as an alternative to spinach in 1 recipe of the dataset."
+  },
+  {
+   "use": "chili leaves",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list chili leaves as an alternative to spinach in 1 recipe of the dataset."
+  }
+ ],
+ "spinach espinaca": [
+  {
+   "use": "malunggay",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list malunggay as an alternative to spinach espinaca in 1 recipe of the dataset."
+  }
+ ],
+ "squid ink de calamar": [
+  {
+   "use": "squid",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list squid as an alternative to squid ink de calamar in 1 recipe of the dataset."
+  }
+ ],
+ "sriracha": [
+  {
+   "use": "hot sauce",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list hot sauce as an alternative to sriracha in 1 recipe of the dataset."
+  }
+ ],
+ "sugar": [
+  {
+   "use": "brown sugar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list brown sugar as an alternative to sugar in 1 recipe of the dataset."
+  }
+ ],
+ "sweet onion": [
+  {
+   "use": "red onion",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list red onion as an alternative to sweet onion in 1 recipe of the dataset."
+  }
+ ],
+ "sweet soy sauce": [
+  {
+   "use": "dark soy sauce",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list dark soy sauce as an alternative to sweet soy sauce in 1 recipe of the dataset."
+  }
+ ],
+ "tahure": [
+  {
+   "use": "tofu",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tofu as an alternative to tahure in 1 recipe of the dataset."
+  }
+ ],
+ "tamarind": [
+  {
+   "use": "sinigang mix",
+   "source": "recipes",
+   "count": 4,
+   "note": "Recipe authors list sinigang mix as an alternative to tamarind in 4 recipes of the dataset."
+  }
+ ],
+ "tamarind flower bud": [
+  {
+   "use": "tamarind leaves",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tamarind leaves as an alternative to tamarind flower bud in 1 recipe of the dataset."
+  }
+ ],
+ "tamarind paste": [
+  {
+   "use": "sinigang mix",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list sinigang mix as an alternative to tamarind paste in 1 recipe of the dataset."
+  }
+ ],
+ "tapioca starch": [
+  {
+   "use": "cassava",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cassava as an alternative to tapioca starch in 1 recipe of the dataset."
+  }
+ ],
+ "tilapia": [
+  {
+   "use": "grouper",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list grouper as an alternative to tilapia in 1 recipe of the dataset."
+  },
+  {
+   "use": "red snapper",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list red snapper as an alternative to tilapia in 1 recipe of the dataset."
+  }
+ ],
+ "tofu": [
+  {
+   "use": "tahure",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list tahure as an alternative to tofu in 1 recipe of the dataset."
+  }
+ ],
+ "vegetable oil": [
+  {
+   "use": "annatto oil",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list annatto oil as an alternative to vegetable oil in 2 recipes of the dataset."
+  }
+ ],
+ "vienna sausage": [
+  {
+   "use": "hotdog",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list hotdog as an alternative to vienna sausage in 1 recipe of the dataset."
+  }
+ ],
+ "vinegar": [
+  {
+   "use": "lemon juice",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list lemon juice as an alternative to vinegar in 1 recipe of the dataset."
+  },
+  {
+   "use": "calamansi juice",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list calamansi juice as an alternative to vinegar in 1 recipe of the dataset."
+  }
+ ],
+ "vinegar cane": [
+  {
+   "use": "coconut vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list coconut vinegar as an alternative to vinegar cane in 1 recipe of the dataset."
+  }
+ ],
+ "vinegar filipino cane": [
+  {
+   "use": "coconut vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list coconut vinegar as an alternative to vinegar filipino cane in 1 recipe of the dataset."
+  }
+ ],
+ "vinegar white": [
+  {
+   "use": "apple",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list apple as an alternative to vinegar white in 1 recipe of the dataset."
+  },
+  {
+   "use": "cane vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list cane vinegar as an alternative to vinegar white in 1 recipe of the dataset."
+  },
+  {
+   "use": "rice",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list rice as an alternative to vinegar white in 1 recipe of the dataset."
+  },
+  {
+   "use": "apple cider vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list apple cider vinegar as an alternative to vinegar white in 1 recipe of the dataset."
+  }
+ ],
+ "water": [
+  {
+   "use": "beef broth",
+   "source": "recipes",
+   "count": 7,
+   "note": "Recipe authors list beef broth as an alternative to water in 7 recipes of the dataset."
+  },
+  {
+   "use": "chicken broth",
+   "source": "recipes",
+   "count": 6,
+   "note": "Recipe authors list chicken broth as an alternative to water in 6 recipes of the dataset."
+  },
+  {
+   "use": "rice washing",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list rice washing as an alternative to water in 2 recipes of the dataset."
+  },
+  {
+   "use": "egg",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list egg as an alternative to water in 2 recipes of the dataset."
+  }
+ ],
+ "white": [
+  {
+   "use": "miso",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list miso as an alternative to white in 2 recipes of the dataset."
+  }
+ ],
+ "white onion": [
+  {
+   "use": "yellow onion",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list yellow onion as an alternative to white onion in 1 recipe of the dataset."
+  }
+ ],
+ "white vinegar": [
+  {
+   "use": "cane vinegar",
+   "source": "recipes",
+   "count": 3,
+   "note": "Recipe authors list cane vinegar as an alternative to white vinegar in 3 recipes of the dataset."
+  },
+  {
+   "use": "apple cider vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list apple cider vinegar as an alternative to white vinegar in 1 recipe of the dataset."
+  },
+  {
+   "use": "coconut vinegar",
+   "source": "recipes",
+   "count": 1,
+   "note": "Recipe authors list coconut vinegar as an alternative to white vinegar in 1 recipe of the dataset."
+  }
+ ],
+ "yellow onion": [
+  {
+   "use": "white onion",
+   "source": "recipes",
+   "count": 2,
+   "note": "Recipe authors list white onion as an alternative to yellow onion in 2 recipes of the dataset."
+  }
+ ]
+}

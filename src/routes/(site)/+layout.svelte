@@ -5,6 +5,7 @@
   let {data, children}: LayoutProps = $props();
 </script>
 
+<a class="skip" href="#main">Skip to main content</a>
 <Header user={data.user} />
-{@render children()}
+<main id="main" tabindex="-1">{@render children()}</main>
 <Footer user={data.user} />

@@ -1,7 +1,8 @@
 import type {PageServerLoad} from './$types';
-import {rank} from '$lib/server/catalog';
+import {recommender} from '$lib/server/services/recommendation';
 
-export const load: PageServerLoad = async ({parent}) => {
+export const load: PageServerLoad = async ({parent, platform}) => {
   const {pantry, exclusions} = await parent();
-  return {best: rank(pantry, exclusions)[0] ?? null};
+  const {top} = await recommender(platform).query({pantry, exclusions, perPage: 1});
+  return {best: top};
 };

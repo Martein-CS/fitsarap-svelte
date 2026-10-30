@@ -1,8 +1,30 @@
 {
+  // FitSarap website (SvelteKit on Cloudflare Workers). See README "Architecture" for how the pieces fit together.
   "name": "fitsarap",
   "main": ".svelte-kit/cloudflare/_worker.js",
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_als"],
   "assets": { "binding": "ASSETS", "directory": ".svelte-kit/cloudflare" },
-  "d1_databases": [{ "binding": "DB", "database_name": "fitsarap-db", "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID", "migrations_dir": "migrations" }]
+  "vars": { "APP_VERSION": "4.2.0" },
+
+  // Observability: Workers Logs indexes the JSON log lines (request id, route, status, timings) written by
+  // src/lib/server/infra/log.ts. Source maps make error stack traces point at the TypeScript source.
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
+  "upload_source_maps": true,
+
+  // Database layer. Turn on read replication for fitsarap-db in the Cloudflare dashboard (D1 > Settings) to serve
+  // reads from replicas near users; the app already uses D1 sessions so people always see their own writes.
+  "d1_databases": [{ "binding": "DB", "database_name": "fitsarap-db", "database_id": "278d7bac-c744-4895-872c-4d574c7c38c0", "migrations_dir": "migrations" }],
+
+  // API gateway: rate limits shared by every Worker instance in a Cloudflare location (per client IP).
+  "ratelimits": [
+    { "name": "AUTH_LIMITER", "namespace_id": "1001", "simple": { "limit": 10, "period": 60 } },
+    { "name": "API_LIMITER", "namespace_id": "1002", "simple": { "limit": 120, "period": 60 } }
+  ]
+
+  // ---- Optional, for more scale (uncomment after deploying the matching Worker in workers/) ----
+  // Split-out recommendation service: the site calls it Worker-to-Worker instead of ranking in-process.
+  // ,"services": [{ "binding": "RECOMMENDER", "service": "fitsarap-recommender" }]
+  // Message queue for background events (consumed by workers/jobs). Create it first: npx wrangler queues create fitsarap-events
+  // ,"queues": { "producers": [{ "binding": "EVENTS", "queue": "fitsarap-events" }] }
 }

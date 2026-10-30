@@ -1,8 +1,15 @@
 import {fail} from '@sveltejs/kit';
-import type {Actions} from './$types';
-import {units} from '$lib/constants';
-import {clean} from '$lib/server/auth';
-import {addItem, clearItems, removeItem, saveExclusions} from '$lib/server/data';
+import type {Actions, PageServerLoad} from './$types';
+import {units} from '$lib/domain/constants';
+import {clean} from '$lib/server/infra/crypto';
+import {addItem, clearItems, removeItem, saveExclusions} from '$lib/server/services/kitchen';
+import {recommender} from '$lib/server/services/recommendation';
+
+// "Often cooked with your ingredients": learned ingredient relationships (scripts/relations.py).
+export const load: PageServerLoad = async ({parent, platform}) => {
+  const {pantry} = await parent();
+  return {related: pantry.length ? await recommender(platform).related(pantry, 8) : []};
+};
 
 export const actions: Actions = {
   add: async (event) => {
@@ -14,7 +21,8 @@ export const actions: Actions = {
     if (!name) return fail(400, {message: 'Enter an ingredient name.'});
     if (amount !== null && (!Number.isFinite(amount) || amount <= 0 || amount > 1e8)) return fail(400, {message: 'Enter an amount or choose unknown quantity.'});
     if (unit !== null && !units.includes(unit)) return fail(400, {message: 'Choose a valid unit.'});
-    await addItem(event, {name, amount, unit, approximate: f.get('approximate') === 'on'});
+    const r = await addItem(event, {name, amount, unit, approximate: f.get('approximate') === 'on'});
+    if (r.error) return fail(400, {message: r.error});
     return {ok: true};
   },
   remove: async (event) => {

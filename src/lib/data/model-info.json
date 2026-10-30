@@ -1,0 +1,33 @@
+{
+ "dataset": "FitSarap v5.1 (1,911 recipes)",
+ "model": "Hybrid (TF-IDF)",
+ "weights": {
+  "tfidf": 0.4,
+  "coverage": 0.6,
+  "quantity": 0.1,
+  "family_credit": 0.5
+ },
+ "benchmark": {
+  "test_ndcg5": "0.938 ± 0.006",
+  "runner_up": "Hybrid (SBERT-MiniLM) 0.905",
+  "report": "fitsarap_benchmark_results_v5_1.md"
+ },
+ "staples": [
+  "water",
+  "ice",
+  "salt",
+  "sea salt",
+  "rock salt",
+  "kosher salt",
+  "black pepper",
+  "black peppercorn",
+  "cooking oil",
+  "vegetable oil",
+  "canola oil",
+  "corn oil",
+  "palm oil",
+  "peanut oil",
+  "safflower oil",
+  "cooking spray"
+ ]
+}

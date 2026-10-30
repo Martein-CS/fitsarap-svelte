@@ -1,6 +1,6 @@
 {
   "name": "fitsarap",
-  "version": "3.0.0",
+  "version": "4.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,18 +12,29 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "db:local": "wrangler d1 migrations apply fitsarap-db --local",
     "db:remote": "wrangler d1 migrations apply fitsarap-db --remote",
-    "data": "node scripts/build-recipes.mjs",
-    "data:seed": "node scripts/build-recipes.mjs --file scripts/seed-rows.json"
+    "data": "python3 scripts/export_v51.py ../fitsarap-v5.1 ../fitsarap-v5.1/fitsarap_preprocessing_v5.py",
+    "parity": "esbuild scripts/parity-test.ts --bundle --platform=node --log-level=warning --outfile=.svelte-kit/parity.cjs && node .svelte-kit/parity.cjs",
+    "test": "esbuild scripts/unit-test.ts --bundle --platform=node --log-level=warning --outfile=.svelte-kit/unit-test.cjs && node --test .svelte-kit/unit-test.cjs",
+    "check:workers": "tsc -p workers/tsconfig.json",
+    "relations": "python3 scripts/relations.py",
+    "verify": "npm run check && npm run check:workers && npm test && npm run parity && npm run build",
+    "deploy:recommender": "wrangler deploy -c workers/recommender/wrangler.jsonc",
+    "deploy:jobs": "wrangler deploy -c workers/jobs/wrangler.jsonc",
+    "setup:cloudflare": "node scripts/setup-cloudflare.mjs"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250101.0",
-    "@sveltejs/adapter-cloudflare": "^7.0.0",
-    "@sveltejs/kit": "^2.20.0",
-    "@sveltejs/vite-plugin-svelte": "^5.0.0",
-    "svelte": "^5.0.0",
-    "svelte-check": "^4.0.0",
-    "typescript": "^5.6.0",
-    "vite": "^6.0.0",
-    "wrangler": "^4.0.0"
+    "@cloudflare/workers-types": "5.20261030.1",
+    "@sveltejs/adapter-cloudflare": "7.2.9",
+    "@sveltejs/kit": "2.70.3",
+    "@sveltejs/vite-plugin-svelte": "5.1.1",
+    "esbuild": "0.25.12",
+    "svelte": "5.57.3",
+    "svelte-check": "4.7.7",
+    "typescript": "5.9.3",
+    "vite": "6.4.5",
+    "wrangler": "4.153.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

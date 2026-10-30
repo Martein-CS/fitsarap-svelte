@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "types": [
+      "@cloudflare/workers-types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "$lib/*": [
+        "../src/lib/*"
+      ]
+    }
+  },
+  "include": [
+    "recommender/index.ts",
+    "jobs/index.ts",
+    "../src/app.d.ts"
+  ]
+}
